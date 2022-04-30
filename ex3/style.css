@@ -28,3 +28,7 @@ p::first-line {
 a[target="_blank"] {
   font-size: xx-large;
 }
+
+h2 {
+  background-color: #0000ff;
+}
