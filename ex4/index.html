@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- This is the minified production version of parse js -->
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Lista de Tarefas</h1>
+    <input id="descricao" type="text" placeholder="descricao" />
+    <button id="createButton">Create task</button>
+  </body>
+  <script>
+    // Initialize Parse
+    
+Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
+// Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
+Parse.initialize(
+  'HvIvaSVkp5kQat4WFkIlCuhxierahIuUtkdGDDqO', // This is your Application ID
+  'Eh39XtsFPHfmJR3qPI5bFk4zV7hZaEo0ehsOxzPU' // This is your Javascript key
+);
+
+    // Create a new task
+    async function createParseTask() {
+      
+  const task = new Parse.Object('Task');
+  task.set('descricao', 'teste');
+  task.set('concluida', true);
+  try {
+    const result = await task.save();
+    // Access the Parse Object attributes using the .GET method
+    console.log('object descricao: ', result.get('descricao'));
+    console.log('object concluida: ', result.get('concluida'));
+    console.log('ParseObject created', result);
+  } catch (error) {
+    console.error('Error while creating ParseObject: ', error);
+  }
+    }
+
+    // Add on click listener to call the create parse task function
+    document
+      .getElementById('createButton')
+      .addEventListener('click', async function () {
+        createParseTask()
+      })
+  </script>
+</html>
