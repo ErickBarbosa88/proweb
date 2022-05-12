@@ -1,19 +1,4 @@
-/*@font-face {
-    font-family: 'Tiresias Infofont';
-    src: url(./assets/font/tiresias_infofont-webfont.woff) format('woff'),
-         url(./assets/font/tiresias_infofont-webfont.woff2) format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Tiresias Infofont';
-    src: url(./assets/font/tiresias_infofont_italic-webfont.woff) format('woff'),
-         url(./assets/font/tiresias_infofont_italic-webfont.woff2) format('woff2');
-    font-weight: normal;
-    font-style: italic;
-}
-*/
 * {
     font-family: 'Tiresias Infofont';
 }
@@ -24,13 +9,14 @@ h1 {
     margin: 0;
     padding: 2.5vh;
     font-size: 8vw;
-    color: #000000;
+    color: #ffffff;
+    background-color: #000000;
 }
 
 input {
     padding: 0 10px;
     border-radius: 15px;
-    background: #757572;
+    background: #ffffff;
     border: 0.4vw solid #1c1c1c;
 }
 
@@ -46,9 +32,9 @@ input[type="checkbox"] {
 button {
     text-transform: uppercase;
     border-radius: 15px;
-    background: #212121;
+    background: #fffdfd;
     border: 0.4vw solid #fffef8;
-    color: #fffef8;
+    color: #000000;
     user-select: none;
 }
 
@@ -66,30 +52,32 @@ ul {
 li {
     height: 8.5vh;
     width: 100vw;
-    background: #1c1c1c;
+    background: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 li:hover {
-    background: #1c1c1c88;
+    background: #fcfcfc88;
     cursor: pointer;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+   background-color: #d89999;
 }
 
 ul li:nth-child(odd) {
-    background: #2a2a2a;
+    background: #ffffff;
     cursor: pointer;
 }
 
 ul li:nth-child(odd):hover {
-    background: #2a2a2a88;
+    background: #11111188;
 }
 
 #done-list li label {
@@ -185,7 +173,7 @@ ul li:nth-child(odd):hover {
 .insert-text:hover {
     cursor: pointer;
     text-shadow: -0.25vw 0.25vw #fffef8, -0.25vw -0.25vw #fffef8, 0.25vw 0.25vw #fffef8, 0.25vw -0.25vw #fffef8;
-    color: #212121;
+    color: #eeeeee;
 }
 
 .item-first, .item-last {
